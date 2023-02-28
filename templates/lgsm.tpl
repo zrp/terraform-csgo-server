@@ -1,0 +1,8 @@
+defaultmap="${default_map}"
+maxplayers="${max_players}"
+slackalert="${slack_alert}"
+slackwebhook="${slack_webhook_url}"
+gslt="${gslt}"
+tickrate="${tickrate}"
+gametype="0"
+gamemode="1"

@@ -1,0 +1,10 @@
+tv_enable 1
+tv_autorecord 1
+tv_advertise_watchable 1
+mp_teamname_1 "ZRPuritanos"
+mp_teamname_2 "ZRPistolas"
+mp_teamflag_1 "br"
+mp_teamflag_2 "br"
+mp_teamscore_max "2"
+mp_teamscore_1 "0"
+mp_teamscore_2 "0"

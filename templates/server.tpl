@@ -1,0 +1,78 @@
+// ************************************************************************** //
+//                                                                            //
+//     Counter-Strike: Global Offensive - server.cfg                          //
+//     Version 120719                                                         //
+//                                                                            //
+// ************************************************************************** //
+
+// .................................. Basic ................................. //
+
+// Hostname - Name of the server.
+hostname "${hostname}"
+
+// RCON - remote console password.
+rcon_password "${rcon_password}"
+
+// Server password - for private servers.
+sv_password "${sv_password}"
+
+// Email - Server admin email.
+// Example: sv_contact "email@example.com"
+sv_contact "${sv_contact}"
+
+// LAN mode - Server is a LAN server; can't connect from the internet. VAC (Valve Anti-Cheat) is disabled in this mode.
+// Default: sv_lan 0
+sv_lan 0
+
+// Cheats mode - Server is disabled to use cheats by default;Commands like noclip,god are disabled to be exploited by the players. VAC (Valve Anti-Cheat) is disabled in this mode when value is set to '1'.
+// Default: sv_cheats 0
+// Cheats ON: sv_cheats 1
+sv_cheats 0
+
+// Tags - Used to provide extra information to clients when they're browsing for servers. Separate tags with a comma.
+// Example: sv_tags "128-tick,deathmatch,dm,ffa,pistol,dust2"
+sv_tags "${sv_tags}"
+// Region - The region of the world to report this server in.
+// Default: -1
+// 0 - US East, 1 - US West, 2 - South America, 3 - Europe, 4 - Asia, 5 - Australia, 6 - Middle East, 7 - Africa
+sv_region ${sv_region}
+// ............................. Server Logging ............................. //
+// Enable log - Enables logging to file, console, and udp < on | off >.
+// Recommended: log on
+log on
+// Log bans - Log server bans in the server logs.
+// Default: sv_logbans 1
+// Recommended: sv_logbans 1
+sv_logbans 1
+// Log echo - Display log information to the server console.
+// Default: sv_logecho 1
+// Recommended: sv_logecho 1
+sv_logecho 1
+// Log file - Log server information in the log file.
+// Default: sv_logfile 1
+// Recommended: sv_logfile 1
+sv_logfile 1
+// One file log - Log server information to only one file.
+// Default: sv_log_onefile 0
+// Recommended: sv_log_onefile 0
+sv_log_onefile 0
+// Server Hibernation
+sv_hibernate_when_empty 1
+sv_hibernate_ms 5
+
+// ............................. Server Query ............................. //
+// More info at: https://www.gametracker.com/games/csgo/forum.php?thread=91691
+host_name_store 1
+host_info_show 1
+host_players_show 2
+// ................................ Ban List ................................ //
+// User ban - Server banlist based on user steam ID.
+// Recommended: exec banned_user.cfg
+exec banned_user.cfg
+// IP ban - Server banlist based on user IP.
+// Recommended: exec banned_ip.cfg
+exec banned_ip.cfg
+// Write ID - Writes a list of permanently-banned user IDs to banned_user.cfg.
+writeid
+// Write IP - Save the ban list to banned_ip.cfg.
+writeip
